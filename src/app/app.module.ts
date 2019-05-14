@@ -1,3 +1,4 @@
+import { AuthGuard } from './_guards/auth.guard';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -38,7 +39,8 @@ import { MessagesComponent } from './messages/messages.component';
    providers: [
       AuthService,
       AlertifyService,
-      ErrorInterceptorProvider
+      ErrorInterceptorProvider,
+      AuthGuard
    ],
    bootstrap: [
       AppComponent
