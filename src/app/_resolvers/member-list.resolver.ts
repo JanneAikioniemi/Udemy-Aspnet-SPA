@@ -7,7 +7,7 @@ import { UserService } from './../_services/user.service';
 import { User } from './../_models/user';
 
 @Injectable()
-export class MemberListResolver implements Resolve<User> {
+export class MemberListResolver implements Resolve<User[]> {
 
     constructor(private userService: UserService, private router: Router, private alertify: AlertifyService) {
     }
