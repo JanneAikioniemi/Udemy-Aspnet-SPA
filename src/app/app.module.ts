@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BsDropdownModule, TabsModule } from 'ngx-bootstrap';
+import { NgxGalleryModule } from 'ngx-gallery';
 import { AppRoutingModule } from './app-routing.module';
 
 import { ErrorInterceptorProvider } from './_services/error.interceptor';
@@ -45,6 +46,7 @@ export function tokenGetter() {
       AppRoutingModule,
       HttpClientModule,
       FormsModule,
+      NgxGalleryModule,
       TabsModule.forRoot(),
       BsDropdownModule.forRoot(),
       JwtModule.forRoot({
