@@ -1,3 +1,4 @@
+import { MemberCardComponent } from './members/member-card/member-card.component';
 import { AuthGuard } from './_guards/auth.guard';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -15,9 +16,10 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
-import { MemberListComponent } from './member-list/member-list.component';
+import { MemberListComponent } from './members/member-list/member-list.component';
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
+import { UserService } from './_services/user.service';
 
 @NgModule({
    declarations: [
@@ -27,7 +29,8 @@ import { MessagesComponent } from './messages/messages.component';
       HomeComponent,
       MemberListComponent,
       ListsComponent,
-      MessagesComponent
+      MessagesComponent,
+      MemberCardComponent
    ],
    imports: [
       BrowserModule,
@@ -40,7 +43,8 @@ import { MessagesComponent } from './messages/messages.component';
       AuthService,
       AlertifyService,
       ErrorInterceptorProvider,
-      AuthGuard
+      AuthGuard,
+      UserService
    ],
    bootstrap: [
       AppComponent
